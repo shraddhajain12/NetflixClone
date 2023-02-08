@@ -1,0 +1,42 @@
+.footer {
+    height: auto;
+    width: 100%;
+    display: flex;
+    border-top: 8px solid gray;
+    padding: 40px;
+    align-items: center;
+    color: white;
+    justify-content: space-between;
+    
+}
+
+
+.left>* {
+    margin-bottom: 30px;
+}
+
+.footer .logo img {
+    width: 160px;
+    height: 40px;
+}
+
+
+.list {
+    display: flex;
+
+}
+
+.list ul {
+    display: flex;
+    flex-direction: column;
+    margin-right: 100px;
+}
+
+.list ul li {
+    margin-bottom: 20px;
+}
+
+.list>* {
+    margin-bottom: 80px;
+
+}

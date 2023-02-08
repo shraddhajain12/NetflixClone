@@ -1,0 +1,29 @@
+.tvShow {
+    width: 100%;
+    height: auto;
+    display: flex;
+    /* border: 1px solid greenyellow; */
+    padding: 40px;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+}
+
+.tvShow .name {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    justify-content: space-between;
+}
+
+.tvShow .name h1 {
+    color: white;
+    text-decoration: underline;
+}
+
+.tvShow p {
+    display: flex;
+    align-items: center;
+}
+

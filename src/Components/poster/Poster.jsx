@@ -1,0 +1,41 @@
+import React from 'react'
+import "./poster.css"
+import axios from "axios";
+import { useState } from "react";
+
+
+const Poster = ({ movies }) => {
+
+    // eslint-disable-next-line 
+    const [videoKey, setVideoKey] = useState(null);
+  const handlePosterClick = async (movieId) => {
+    const videoData = await axios.get(
+      `https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=dfb83a503ccee16b00464b65bc3ac410&language=en-US`
+    );
+    const key = videoData.data.results[0].key;
+    setVideoKey(key);
+    window.open("https://www.youtube.com/watch?v=" + key);
+  };
+
+    
+    return (
+        <div className='posterTemplate'>
+            <div className="posterSlot">
+                {movies.map((movie) => (
+                    <div key={movie.id} className="poster"   onClick={() => handlePosterClick(movie.id)}  >
+                        <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
+                        <div className="title"> {movie.name}</div>
+                        <div className="meta">
+                            <div className="year"> {movie.release_date.slice(0, 4)} </div>
+                            <div className="dot">.</div>
+                            <div className="duration">107 min</div>
+                            <div className="type">Movie</div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    )
+}
+
+export default Poster

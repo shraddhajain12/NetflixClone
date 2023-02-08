@@ -1,0 +1,84 @@
+.featured {
+    height: auto;
+    width: 100%;
+    position: relative;
+}
+
+.featured .image img {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(40%);
+}
+
+.info {
+    padding: 40px;
+    position: absolute;
+    bottom: 0.5px;
+    width: 100%;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(74, 72, 100, 0) 0%, rgba(0, 0, 0, 1) 0%, rgba(255, 253, 253, 0) 100%, rgba(249, 249, 255, 1) 100%, rgba(9, 9, 121, 0.3925945378151261) 100%, rgba(0, 212, 255, 1) 100%);
+}
+
+.info>* {
+    margin-bottom: 20px;
+
+}
+
+.featured .title h1 {
+    color: white;
+}
+
+.metaInfo {
+    display: flex;
+    /* justify-items: center; */
+
+}
+
+.quality {
+    display: flex;
+    justify-content: center;
+}
+
+.quality>* {
+    margin-right: 10px;
+    color: white;
+}
+
+.metaInfo .quality .k {
+    display: flex;
+    justify-content: space-between;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+}
+
+
+.genre {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.genre>* {
+    margin-right: 10px;
+
+}
+
+.overView {
+    color: white;
+    width: 50%;
+}
+
+.buttons {
+    display: flex;
+
+}
+
+.buttons>* {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 25px;
+}
